@@ -2,6 +2,11 @@
   "name": "twin-filer",
   "displayName": "%displayName%",
   "description": "%description%",
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#1C263A",
+    "theme": "dark"
+  },
   "version": "0.2.0",
   "publisher": "toshiaki1973",
   "license": "MIT",
@@ -14,6 +19,16 @@
   },
   "categories": [
     "Other"
+  ],
+  "keywords": [
+    "file manager",
+    "filer",
+    "two-pane",
+    "dual pane",
+    "explorer",
+    "preview",
+    "ファイラー",
+    "2画面"
   ],
   "main": "./extension.js",
   "l10n": "./l10n",
