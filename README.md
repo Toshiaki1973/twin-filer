@@ -44,9 +44,13 @@ The idea is to open a separate VS Code window and use it as your file manager.
 
 These shortcuts only apply while the Twin Filer tab is active, and they are passed to text editing while you type in the path or filter box.
 
-### Install (from source)
+### Install
 
-Twin Filer is not on the Marketplace yet.
+Install it from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=toshiaki1973.twin-filer), or search for **Twin Filer** in the Extensions view (Ctrl+Shift+X).
+
+Then run **Twin Filer: Open** from the Command Palette (Ctrl+Shift+P).
+
+### Build from source
 
 ```bash
 git clone https://github.com/Toshiaki1973/twin-filer.git
@@ -54,8 +58,6 @@ cd twin-filer
 npx @vscode/vsce package          # creates twin-filer-<version>.vsix
 code --install-extension twin-filer-*.vsix
 ```
-
-Then run **Twin Filer: Open** from the Command Palette (Ctrl+Shift+P).
 
 To try it without installing:
 
@@ -113,9 +115,13 @@ VS Codeのウィンドウを別にもう1枚開いて、ファイラー専用と
 
 これらのキーはTwin Filerのタブを開いている間だけ有効です。パス欄や絞り込み欄で入力している間は、普通の文字入力として動きます。
 
-### インストール(ソースから)
+### インストール
 
-Marketplaceにはまだ公開していません。
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=toshiaki1973.twin-filer) からインストールするか、VS Codeの拡張機能ビュー(Ctrl+Shift+X)で **Twin Filer** を検索してください。
+
+インストール後、コマンドパレット(Ctrl+Shift+P)から **Twin Filer: 開く** を実行してください。
+
+### ソースからビルド
 
 ```bash
 git clone https://github.com/Toshiaki1973/twin-filer.git
@@ -123,8 +129,6 @@ cd twin-filer
 npx @vscode/vsce package          # twin-filer-<version>.vsix ができます
 code --install-extension twin-filer-*.vsix
 ```
-
-インストール後、コマンドパレット(Ctrl+Shift+P)から **Twin Filer: 開く** を実行してください。
 
 インストールせずに試すなら:
 
