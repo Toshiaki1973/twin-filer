@@ -1,0 +1,17 @@
+{
+  "displayName": "Twin Filer",
+  "description": "A two-pane file manager inside VS Code: tree/flat views, drag to move or copy, and file preview",
+  "cmd.open": "Twin Filer: Open",
+  "cmd.openItem": "Open",
+  "cmd.openExternal": "Open with Default App",
+  "cmd.copy": "Copy",
+  "cmd.cut": "Cut",
+  "cmd.paste": "Paste",
+  "cmd.copyToOther": "Copy to Other Side",
+  "cmd.moveToOther": "Move to Other Side",
+  "cmd.rename": "Rename",
+  "cmd.trash": "Delete (Move to Trash)",
+  "cmd.mkdir": "New Folder",
+  "cmd.flat": "Toggle Flat View",
+  "cmd.refresh": "Refresh"
+}

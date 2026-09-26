@@ -1,0 +1,238 @@
+{
+  "name": "twin-filer",
+  "displayName": "%displayName%",
+  "description": "%description%",
+  "version": "0.2.0",
+  "publisher": "toshiaki1973",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Toshiaki1973/twin-filer.git"
+  },
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "l10n": "./l10n",
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      {
+        "command": "twinFiler.open",
+        "title": "%cmd.open%"
+      },
+      {
+        "command": "twinFiler.openItem",
+        "title": "%cmd.openItem%"
+      },
+      {
+        "command": "twinFiler.openExternal",
+        "title": "%cmd.openExternal%"
+      },
+      {
+        "command": "twinFiler.copy",
+        "title": "%cmd.copy%"
+      },
+      {
+        "command": "twinFiler.cut",
+        "title": "%cmd.cut%"
+      },
+      {
+        "command": "twinFiler.paste",
+        "title": "%cmd.paste%"
+      },
+      {
+        "command": "twinFiler.copyToOther",
+        "title": "%cmd.copyToOther%"
+      },
+      {
+        "command": "twinFiler.moveToOther",
+        "title": "%cmd.moveToOther%"
+      },
+      {
+        "command": "twinFiler.rename",
+        "title": "%cmd.rename%"
+      },
+      {
+        "command": "twinFiler.trash",
+        "title": "%cmd.trash%"
+      },
+      {
+        "command": "twinFiler.mkdir",
+        "title": "%cmd.mkdir%"
+      },
+      {
+        "command": "twinFiler.flat",
+        "title": "%cmd.flat%"
+      },
+      {
+        "command": "twinFiler.refresh",
+        "title": "%cmd.refresh%"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "twinFiler.openItem",
+          "when": "false"
+        },
+        {
+          "command": "twinFiler.openExternal",
+          "when": "false"
+        },
+        {
+          "command": "twinFiler.copy",
+          "when": "false"
+        },
+        {
+          "command": "twinFiler.cut",
+          "when": "false"
+        },
+        {
+          "command": "twinFiler.paste",
+          "when": "false"
+        },
+        {
+          "command": "twinFiler.copyToOther",
+          "when": "false"
+        },
+        {
+          "command": "twinFiler.moveToOther",
+          "when": "false"
+        },
+        {
+          "command": "twinFiler.rename",
+          "when": "false"
+        },
+        {
+          "command": "twinFiler.trash",
+          "when": "false"
+        },
+        {
+          "command": "twinFiler.mkdir",
+          "when": "false"
+        },
+        {
+          "command": "twinFiler.flat",
+          "when": "false"
+        },
+        {
+          "command": "twinFiler.refresh",
+          "when": "false"
+        }
+      ],
+      "webview/context": [
+        {
+          "command": "twinFiler.openItem",
+          "when": "webviewId == 'twinFiler' && webviewSection == 'item'",
+          "group": "1_open@1"
+        },
+        {
+          "command": "twinFiler.openExternal",
+          "when": "webviewId == 'twinFiler' && webviewSection == 'item'",
+          "group": "1_open@2"
+        },
+        {
+          "command": "twinFiler.cut",
+          "when": "webviewId == 'twinFiler' && webviewSection == 'item'",
+          "group": "2_clip@1"
+        },
+        {
+          "command": "twinFiler.copy",
+          "when": "webviewId == 'twinFiler' && webviewSection == 'item'",
+          "group": "2_clip@2"
+        },
+        {
+          "command": "twinFiler.paste",
+          "when": "webviewId == 'twinFiler' && webviewSection != 'input'",
+          "group": "2_clip@3"
+        },
+        {
+          "command": "twinFiler.copyToOther",
+          "when": "webviewId == 'twinFiler' && webviewSection == 'item'",
+          "group": "3_other@1"
+        },
+        {
+          "command": "twinFiler.moveToOther",
+          "when": "webviewId == 'twinFiler' && webviewSection == 'item'",
+          "group": "3_other@2"
+        },
+        {
+          "command": "twinFiler.rename",
+          "when": "webviewId == 'twinFiler' && webviewSection == 'item'",
+          "group": "4_edit@1"
+        },
+        {
+          "command": "twinFiler.trash",
+          "when": "webviewId == 'twinFiler' && webviewSection == 'item'",
+          "group": "4_edit@2"
+        },
+        {
+          "command": "twinFiler.mkdir",
+          "when": "webviewId == 'twinFiler' && webviewSection != 'input'",
+          "group": "5_new@1"
+        },
+        {
+          "command": "twinFiler.refresh",
+          "when": "webviewId == 'twinFiler' && webviewSection != 'input'",
+          "group": "6_view@1"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "key": "ctrl+c",
+        "command": "twinFiler.copy",
+        "when": "activeWebviewPanelId == 'twinFiler' && !twinFiler.inputFocused"
+      },
+      {
+        "key": "ctrl+x",
+        "command": "twinFiler.cut",
+        "when": "activeWebviewPanelId == 'twinFiler' && !twinFiler.inputFocused"
+      },
+      {
+        "key": "ctrl+v",
+        "command": "twinFiler.paste",
+        "when": "activeWebviewPanelId == 'twinFiler' && !twinFiler.inputFocused"
+      },
+      {
+        "key": "f5",
+        "command": "twinFiler.copyToOther",
+        "when": "activeWebviewPanelId == 'twinFiler' && !twinFiler.inputFocused"
+      },
+      {
+        "key": "f6",
+        "command": "twinFiler.moveToOther",
+        "when": "activeWebviewPanelId == 'twinFiler' && !twinFiler.inputFocused"
+      },
+      {
+        "key": "f2",
+        "command": "twinFiler.rename",
+        "when": "activeWebviewPanelId == 'twinFiler' && !twinFiler.inputFocused"
+      },
+      {
+        "key": "f7",
+        "command": "twinFiler.mkdir",
+        "when": "activeWebviewPanelId == 'twinFiler' && !twinFiler.inputFocused"
+      },
+      {
+        "key": "delete",
+        "command": "twinFiler.trash",
+        "when": "activeWebviewPanelId == 'twinFiler' && !twinFiler.inputFocused"
+      },
+      {
+        "key": "ctrl+f",
+        "command": "twinFiler.flat",
+        "when": "activeWebviewPanelId == 'twinFiler'"
+      },
+      {
+        "key": "ctrl+r",
+        "command": "twinFiler.refresh",
+        "when": "activeWebviewPanelId == 'twinFiler'"
+      }
+    ]
+  }
+}
